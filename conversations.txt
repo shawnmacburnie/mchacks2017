@@ -1,0 +1,59 @@
+-list options:
+    hey there, what are my options?
+    I don't know what to get.
+    -food
+        I am hungry.
+    -drink
+        I am thursty.
+    -temperature
+        I want something hot.
+        I want something cold.
+        I want some hot food.
+        I want some cold food.
+
+-getting prices:
+    -specific item
+        how much is {item}?
+    -all items
+        whats my total.
+        what is the cost?
+
+
+-listing items
+    what do I have so far?
+    what items did I get so far?
+    what are my items?
+    -drink
+        what did I get to drink?
+    -food
+        what did I get to eat?
+
+
+adding items
+    I want to get {item}.
+    I am feeling like a  {item}.
+    I want to add {item}.
+    can I get a {item}.
+
+
+removing items 
+    I don't think I want {item} anymore.
+    can I remove {item}.
+    take {item} off my list.
+    I am not feeling {item} anymore.
+    remove {item} and {item} and {item} ...
+
+canceling order
+    cancel my order.
+    I don't want anything anymore.
+
+deals
+    what are my deals?
+    do you have any offers?
+    is there anything on sale?
+
+completing order
+    ok I am done.
+    I am finished with my order.
+    that is everything.
+    place my order.
