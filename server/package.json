@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "semantria": "^3.5.76"
+    "react-native-speech": "^0.1.2",
+    "semantria": "^3.5.76",
+    "ws": "^1.1.1"
   }
 }

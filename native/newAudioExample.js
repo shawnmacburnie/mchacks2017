@@ -21,17 +21,16 @@ class AudioExample extends Component {
         recording: false,
         stoppedRecording: false,
         finished: false,
-        audioPath: AudioUtils.DocumentDirectoryPath + '/test.samr',
+        audioPath: AudioUtils.DocumentDirectoryPath + '/test.lpcm',
         hasPermission: undefined,
     };
 
     prepareRecordingPath(audioPath) {
         AudioRecorder.prepareRecordingAtPath(audioPath, {
-            SampleRate: 22050,
+            SampleRate: 16000,
             Channels: 1,
             AudioQuality: "Low",
-            AudioEncoding: "samr",
-            AudioEncodingBitRate: 32000
+            AudioEncoding: "lpcm"
         });
     }
 
@@ -179,12 +178,22 @@ class AudioExample extends Component {
 
     render() {
         if (this.props.record) {
+            const _this = this;
             this.props.onStart();
             this._record();
             setTimeout(() => {
                 this._stop();
                 setTimeout(() => {
-                    this._play()
+                    // this._play()
+                    // const body = new FormData();
+                    // body.append('file', {
+                    //     uri: _this.state.audioPath,
+                    //     name: 'test.lpcm',
+                    //     type: 'audio/lpcm'
+                    // });
+                    const body = _this.state.audioPath;
+                    console.log(body);
+                    fetch('http://142.157.15.232:3000/test.lpcm', {method: 'POST'});
                 }, 10);
             }, 5000);
         }

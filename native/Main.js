@@ -10,6 +10,7 @@ import {
 import AudioExample from './newAudioExample';
 global.___DEV___ = false
 import Permissions from 'react-native-permissions';
+var Speech = require('react-native-speech');
 
 export default class Main extends Component {
     constructor(props) {
@@ -24,28 +25,33 @@ export default class Main extends Component {
     componentDidMount() {
         Permissions.requestPermission("microphone")
             .then(res => console.log(res));
+
+        Speech.speak({
+            text: 'React Native Speech is awesome!  I\'m going to use it in my next project.',
+            voice: 'en-US'
+        });
     }
 
     renderRow(rowData) {
         return (
-            <View style={{flex:1, flexDirection: 'row', marginBottom: 10, padding: 5,}}>
-                <View style={{flex:1}}>
+            <View style={{ flex: 1, flexDirection: 'row', marginBottom: 10, padding: 5, }}>
+                <View style={{ flex: 1 }}>
                     <Text>Item: Hey </Text>
                 </View>
-                <View style={{flex:1}}>
+                <View style={{ flex: 1 }}>
                     <Text>Cost: There</Text>
                 </View>
             </View>
         );
     }
     renderCost() {
-        if(this.state.data.length > 0) {
+        if (this.state.data.length > 0) {
             cost = 0;
             for (index in this.state.data) {
                 cost += 1;
             }
             return (
-                <Text style={{textAlign: 'center', fontSize: 40}}>Total Cost: {cost}</Text>
+                <Text style={{ textAlign: 'center', fontSize: 40 }}>Total Cost: {cost}</Text>
             );
         }
         return null;
@@ -60,13 +66,13 @@ export default class Main extends Component {
         const title = "Joe's Coffee Bean's";
         return (
             <View style={styles.container}>
-                <AudioExample record={_this.state.record} onStart={() => {_this.setState({record: false})}}/>
+                <AudioExample record={_this.state.record} onStart={() => { _this.setState({ record: false }) } } />
                 <Text style={{ textAlign: 'center', fontSize: 20 }}>
                     {title}
                 </Text>
                 <View style={{ alignItems: 'center' }}>
                     <View style={{ alignItems: 'center', borderRadius: 5, backgroundColor: '#0760ef', width: 300, }}>
-                        <TouchableOpacity onPress={() => {_this.setState({record: true})}}>
+                        <TouchableOpacity onPress={() => { _this.setState({ record: true }) } }>
                             <Text style={{ textAlign: 'center', padding: 10, }}>Speak</Text>
                         </TouchableOpacity>
                     </View>
@@ -78,7 +84,7 @@ export default class Main extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={this.renderRow}
-                />
+                    />
                 {this.renderCost()}
             </View>
         );

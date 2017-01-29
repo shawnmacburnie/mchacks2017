@@ -40,6 +40,7 @@ function getAction(topics) {
     }
     return;
 }
+
 function getItem(data) {
     var items = [];
     for (topicIndex in topics) {
