@@ -193,7 +193,7 @@ class AudioExample extends Component {
                     // });
                     const body = _this.state.audioPath;
                     console.log(body);
-                    fetch('http://142.157.15.232:3000/test.lpcm', {method: 'POST'});
+                    fetch('http://localhost:3000/test.lpcm', {method: 'POST'});
                 }, 10);
             }, 5000);
         }

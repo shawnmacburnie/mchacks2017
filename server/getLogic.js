@@ -16,9 +16,18 @@ var actianList = {
 
 var itemList = {
     coffee: {
-        price: 1.99
+      price: 1.99
     },
-    
+		donut: {
+			price: 0.99
+		},
+		sandwich: {
+			price: 4.99
+		},
+		milkshake: {
+			price: 2.99
+		}
+
 }
 module.exports = function (data) {
     var topics = data[0].topics
