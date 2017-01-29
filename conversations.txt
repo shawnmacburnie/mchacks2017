@@ -8,8 +8,6 @@
     -temperature
         I want something hot.
         I want something cold.
-        I want some hot food.
-        I want some cold food.
 
 -getting prices:
     -specific item
@@ -23,11 +21,6 @@
     what do I have so far?
     what items did I get so far?
     what are my items?
-    -drink
-        what did I get to drink?
-    -food
-        what did I get to eat?
-
 
 adding items
     I want to get {item}.
@@ -41,11 +34,9 @@ removing items
     can I remove {item}.
     take {item} off my list.
     I am not feeling {item} anymore.
-    remove {item} and {item} and {item} ...
 
 canceling order
     cancel my order.
-    I don't want anything anymore.
 
 deals
     what are my deals?
@@ -55,5 +46,4 @@ deals
 completing order
     ok I am done.
     I am finished with my order.
-    that is everything.
     place my order.
