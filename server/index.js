@@ -6,5 +6,10 @@ var getAnalysis = require('./getAnalysis');
 var getLogic = require('./getLogic');
 
 getAnalysis("i want a coffee", function(results) {
-    getLogic(results);
+    var l = getLogic(results);
+    if (!l.action) {
+        console.log('Sorry, I didnt get that, could you say it again?');
+    }
+    var message = "Completed " + l.action.replace(/([A-Z])/g, ' $1');
+    console.log(message);
 });

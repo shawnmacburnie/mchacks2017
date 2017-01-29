@@ -1,20 +1,18 @@
 // #fuckDatabases!
-var actianList = [
-    'removeItem',
-    'addItem',
-    'finishOrder',
-    'cancelOrder',
-    'findItemCost',
-    'findTotalCost',
-    'listColdOptions',
-    'listDeals',
-    'listDrinkOptions',
-    'listFoodOptions',
-    'listHotOptions',
-    'listMyItems',
-    'listOptions',
-
-];
+var actianList = {
+    removeItem: 'removed item.',
+    addItem: 'finished adding item.',
+    finishOrder: 'finished order.',
+    cancelOrder: 'cancelled order.',
+    findItemCost: 'the cost of that item is',
+    findTotalCost: 'the total cost is',
+    listColdOptions: 'the cold items are',
+    listDrinkOptions: 'the drink options are',
+    listFoodOptions: 'the food options are',
+    listHotOptions: 'the hot items are',
+    listMyItems: 'your items are',
+    listOptions: 'You can either order some food or you can order something to drink.',
+};
 
 var itemList = {
     coffee: {
@@ -26,6 +24,9 @@ module.exports = function (data) {
     var topics = data[0].topics
     var action = getAction(topics);
     console.log(action);
+    return {
+        action: action
+    }
     // var items = getItems(topics);
 }
 
