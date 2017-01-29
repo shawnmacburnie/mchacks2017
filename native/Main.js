@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import AudioExample from './newAudioExample';
 global.___DEV___ = false
+import Permissions from 'react-native-permissions';
+
 export default class Main extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +20,10 @@ export default class Main extends Component {
             data: ['row 1', 'row 2'],
             record: false,
         };
+    }
+    componentDidMount() {
+        Permissions.requestPermission("microphone")
+            .then(res => console.log(res));
     }
 
     renderRow(rowData) {

@@ -1,6 +1,7 @@
 package com.native;
 
 import com.facebook.react.ReactActivity;
+import com.joshblour.reactnativepermissions.ReactNativePermissionsPackage;
 import com.mmazzarolo.beaconsandroid.BeaconsAndroidPackage;
 
 public class MainActivity extends ReactActivity {

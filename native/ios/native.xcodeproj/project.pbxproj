@@ -25,6 +25,7 @@
 		292D75DE1E3DA8B100E49900 /* libRNBeacon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292D75DC1E3DA89E00E49900 /* libRNBeacon.a */; };
 		292D75E11E3DA8C600E49900 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292D75E01E3DA8C600E49900 /* CoreLocation.framework */; };
 		299D55C81E3D2DB200450815 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 299D55C71E3D2D8100450815 /* libRNSound.a */; };
+		32E210FC396940AA8FF6F2B0 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F851CF8B8B4BCFA87A3BF1 /* libReactNativePermissions.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9AC8D531033E4D968EEEA74D /* libRNAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BEDB728290437AA09AADC6 /* libRNAudio.a */; };
@@ -108,6 +109,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNBluetoothState;
+		};
+		292D763C1E3DE9F900E49900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7481060C150D41AF8D0F39E7 /* ReactNativePermissions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D23B34F1C767B80008B4819;
+			remoteInfo = ReactNativePermissions;
 		};
 		299D55C01E3D29C500450815 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -269,8 +277,10 @@
 		299D55C21E3D2D8100450815 /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		44BEDB728290437AA09AADC6 /* libRNAudio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAudio.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		7481060C150D41AF8D0F39E7 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		95F851CF8B8B4BCFA87A3BF1 /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativePermissions.a; sourceTree = "<group>"; };
 		ADB84E3C1A1B43B38325814C /* libRNBluetoothState.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBluetoothState.a; sourceTree = "<group>"; };
 		E047EAC8DAB24DFC9719D0D4 /* RNBluetoothState.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBluetoothState.xcodeproj; path = "../node_modules/react-native-bluetooth-state/RNBluetoothState.xcodeproj"; sourceTree = "<group>"; };
 		E5DBD0E540C94442AF0E380B /* RNAudio.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAudio.xcodeproj; path = "../node_modules/react-native-audio/ios/RNAudio.xcodeproj"; sourceTree = "<group>"; };
@@ -305,6 +315,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				9AC8D531033E4D968EEEA74D /* libRNAudio.a in Frameworks */,
 				9C5BFCDC1B944AAEAE6162F7 /* libRNBluetoothState.a in Frameworks */,
+				32E210FC396940AA8FF6F2B0 /* libReactNativePermissions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +452,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		292D76201E3DE9F900E49900 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				292D763D1E3DE9F900E49900 /* libReactNativePermissions.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		299D55A41E3D29C500450815 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +512,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				E5DBD0E540C94442AF0E380B /* RNAudio.xcodeproj */,
 				E047EAC8DAB24DFC9719D0D4 /* RNBluetoothState.xcodeproj */,
+				7481060C150D41AF8D0F39E7 /* ReactNativePermissions.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -648,6 +668,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = 292D76201E3DE9F900E49900 /* Products */;
+					ProjectRef = 7481060C150D41AF8D0F39E7 /* ReactNativePermissions.xcodeproj */;
+				},
+				{
 					ProductGroup = 299D55A41E3D29C500450815 /* Products */;
 					ProjectRef = E5DBD0E540C94442AF0E380B /* RNAudio.xcodeproj */;
 				},
@@ -741,6 +765,13 @@
 			fileType = archive.ar;
 			path = libRNBluetoothState.a;
 			remoteRef = 292D760E1E3DBD0F00E49900 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		292D763D1E3DE9F900E49900 /* libReactNativePermissions.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativePermissions.a;
+			remoteRef = 292D763C1E3DE9F900E49900 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		299D55C11E3D29C500450815 /* libRNAudio.a */ = {
@@ -970,6 +1001,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/native.app/native";
@@ -986,6 +1018,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

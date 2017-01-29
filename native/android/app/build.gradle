@@ -126,6 +126,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-permissions')
     compile project(':react-native-beacons-android')
     compile project(':react-native-sound')
     compile project(':react-native-audio')
