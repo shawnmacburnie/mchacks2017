@@ -26,10 +26,6 @@ export default class Main extends Component {
         Permissions.requestPermission("microphone")
             .then(res => console.log(res));
 
-        Speech.speak({
-            text: 'React Native Speech is awesome!  I\'m going to use it in my next project.',
-            voice: 'en-US'
-        });
     }
 
     renderRow(rowData) {
