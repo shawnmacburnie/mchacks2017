@@ -193,7 +193,12 @@ class AudioExample extends Component {
                     // });
                     const body = _this.state.audioPath;
                     console.log(body);
-                    fetch('http://localhost:3000/test.lpcm', {method: 'POST'});
+                    fetch('http://localhost:3000/test.lpcm', {method: 'POST'}).then(function(response) {
+											Speech.speak({
+												text: response,
+												voice: 'en-US'
+											});
+                });
                 }, 10);
             }, 5000);
         }

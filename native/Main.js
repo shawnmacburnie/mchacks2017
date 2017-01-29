@@ -11,7 +11,7 @@ import AudioExample from './newAudioExample';
 global.___DEV___ = false
 import Permissions from 'react-native-permissions';
 var Speech = require('react-native-speech');
-
+console.disableYellowBox = true;
 export default class Main extends Component {
     constructor(props) {
         super(props)
@@ -73,19 +73,11 @@ export default class Main extends Component {
                 <View style={{ alignItems: 'center' }}>
                     <View style={{ alignItems: 'center', borderRadius: 5, backgroundColor: '#0760ef', width: 300, }}>
                         <TouchableOpacity onPress={() => { _this.setState({ record: true }) } }>
-                            <Text style={{ textAlign: 'center', padding: 10, }}>Speak</Text>
+                            <Text style={{ fontSize: 100, textAlign: 'center', padding: 10 }}>Speak</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={{ borderWidth: 1, marginTop: 20 }} />
-                <Text style={{ textAlign: 'center' }}>
-                    My Orders
-                </Text>
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={this.renderRow}
-                    />
-                {this.renderCost()}
             </View>
         );
     }

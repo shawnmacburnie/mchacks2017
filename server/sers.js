@@ -23,10 +23,11 @@ const options = {
 
 module.exports = function () {
     // Detects speech in the audio file
-   fileName = '/Users/shawn/Library/Developer/CoreSimulator/Devices/115BA51F-DB3E-4989-A056-2F564B71CE7E/data/Containers/Data/Application/74972594-1539-49BB-9698-71571D28EB65/Documents/test.lpcm';
+   fileName = '/Users/aa/Library/Developer/CoreSimulator/Devices/9A1AF458-8DD5-4BFB-B98C-50455F9B8189/data/Containers/Data/Application/3FB9C2D5-53D8-49FA-9B89-B30048D4F12F/Documents/test.lpcm';
    speech.recognize(fileName, options)
         .then((results) => {
             const transcription = results[0];
+            cal(results[0]);
             console.log(`Transcription: ${transcription}`);
         });
     // [END speech_quickstart]
