@@ -21,12 +21,16 @@ const options = {
 
 };
 
-module.exports = function () {
+module.exports = function (callback) {
     // Detects speech in the audio file
    fileName = '/Users/shawn/Library/Developer/CoreSimulator/Devices/115BA51F-DB3E-4989-A056-2F564B71CE7E/data/Containers/Data/Application/74972594-1539-49BB-9698-71571D28EB65/Documents/test.lpcm';
    speech.recognize(fileName, options)
+        .catch(err => {
+            console.log(err);
+        })
         .then((results) => {
             const transcription = results[0];
+            callback(results[0]);
             console.log(`Transcription: ${transcription}`);
         });
     // [END speech_quickstart]
