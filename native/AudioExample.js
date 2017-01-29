@@ -9,6 +9,7 @@ import {
   Platform,
   PermissionsAndroid,
 } from 'react-native';
+import BeaconLoader from './BeaconLoader';
 
 import Sound from 'react-native-sound';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
@@ -20,7 +21,7 @@ class AudioExample extends Component {
       recording: false,
       stoppedRecording: false,
       finished: false,
-      audioPath: AudioUtils.DocumentDirectoryPath + '/test.aac',
+      audioPath: AudioUtils.DocumentDirectoryPath + '/test.samr',
       hasPermission: undefined,
     };
 
@@ -29,7 +30,7 @@ class AudioExample extends Component {
         SampleRate: 22050,
         Channels: 1,
         AudioQuality: "Low",
-        AudioEncoding: "aac",
+        AudioEncoding: "samr",
         AudioEncodingBitRate: 32000
       });
     }
@@ -174,11 +175,12 @@ class AudioExample extends Component {
       this.setState({ finished: didSucceed });
       console.log(`Finished recording of duration ${this.state.currentTime} seconds at path: ${filePath}`);
     }
+    
 
     render() {
-
       return (
         <View style={styles.container}>
+          <BeaconLoader beaconCallback={(data) => {console.log(data)}}/>
           <View style={styles.controls}>
             {this._renderButton("RECORD", () => {this._record()}, this.state.recording )}
             {this._renderButton("PLAY", () => {this._play()} )}

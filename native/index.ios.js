@@ -56,5 +56,5 @@
 import {
   AppRegistry
 } from 'react-native';
-import AudioExample from './AudioExample';
-AppRegistry.registerComponent('native', () => AudioExample);
+import Main from './Main';
+AppRegistry.registerComponent('native', () => Main);
